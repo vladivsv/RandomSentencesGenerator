@@ -17,6 +17,17 @@ let randomNouns = getRandomWord(nouns);
 let randomAdverbs = getRandomWord(adverbs);
 let randomDetails = getRandomWord(details);
 
+let who = `${randomNames} from ${randomPlaces}`;
+let action = `${randomAdverbs} ${randomVerbs} ${randomNouns}`;
+let sentence = `${who} ${action} ${randomDetails}`;
+
+console.log('Hello, this is your first random-generated sentence');
+console.log(sentence);
+
+let recursiveAsyncReadLine = function () {
+    readline.question('Click [Enret] to generate a new one', string => {
+    })
+}
 function getRandomWord(arrey) {
     let word = arrey[Math.floor(Math.random() * arrey.length)];
     return word;
